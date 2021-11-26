@@ -5,7 +5,7 @@ import { useFetch } from '../hooks/useFetch';
 
 export default function TripList() {
     const [url, setUrl] = useState('http://localhost:8000/trips');
-    const { data: trips, isPending, error } = useFetch(url);
+    const { data: trips, isPending, error } = useFetch(url, {type: 'GET'});
 
     return (
         <div className="trip-list">
